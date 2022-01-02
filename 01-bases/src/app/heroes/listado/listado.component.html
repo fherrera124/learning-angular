@@ -1,0 +1,39 @@
+<h1>Listado de Héroes</h1>
+
+
+<div *ngIf="heroesBorrados.length; else noBorrado">
+
+    <h3>Último Héroe borrado: <small>{{ ultimoBorrado }}</small></h3>
+
+</div>
+
+
+<ng-template #noBorrado>
+
+    <h3>Ningún héroe borrado</h3>
+
+</ng-template>
+
+
+<button *ngIf="heroes.length" (click)="borrarHeroe()">
+
+    Borrar
+
+</button>
+
+
+<button (click)="resetearListado()">
+
+    Resetear listado
+
+</button>
+
+
+<ul>
+    <li *ngFor="let heroe of heroes;">
+        {{ heroe }}
+    </li>
+
+</ul>
+
+
