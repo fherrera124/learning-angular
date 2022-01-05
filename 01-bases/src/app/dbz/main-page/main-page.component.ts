@@ -16,8 +16,8 @@ export class MainPageComponent {
       poder: 7500,
     },
   ];
-  nuevo: Personaje = {
-    nombre: '',
-    poder: 0,
-  };
+
+  agregarNuevoPersonaje(argumento: Personaje) {
+    this.personajes.push(argumento);
+  }
 }
