@@ -6,6 +6,4 @@ import { DbzService } from '../services/dbz.service';
   selector: 'app-main-page',
   templateUrl: './main-page.component.html',
 })
-export class MainPageComponent {
-  constructor(private dbzService: DbzService) {}
-}
+export class MainPageComponent {}
