@@ -1,12 +1,23 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-
+import { PaisTablaComponent } from './components/pais-tabla/pais-tabla.component';
+import { PorPaisComponent } from './pages/por-pais/por-pais.component';
+import { PorCapitalComponent } from './pages/por-capital/por-capital.component';
+import { PorRegionComponent } from './pages/por-region/por-region.component';
+import { VerPaisComponent } from './pages/ver-pais/ver-pais.component';
+import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from '../app-routing.module';
+import { PaisInputComponent } from './components/pais-input/pais-input.component';
 
 @NgModule({
-  declarations: [],
-  imports: [
-    CommonModule
-  ]
+  declarations: [
+    PorPaisComponent,
+    PorCapitalComponent,
+    PorRegionComponent,
+    VerPaisComponent,
+    PaisTablaComponent,
+    PaisInputComponent,
+  ],
+  imports: [CommonModule, FormsModule, AppRoutingModule],
 })
-export class PaisModule { }
+export class PaisModule {}
