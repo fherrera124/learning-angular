@@ -7,14 +7,26 @@ import { Country } from '../interfaces/pais.interface';
   providedIn: 'root',
 })
 export class PaisService {
-  private apiKey: string = '16edcf36da9eacae9c6aedef4937abdd';
-  private apiUrl: string = 'http://api.countrylayer.com/v2';
+  private apiUrl: string = 'https://restcountries.com/v3.1';
 
   constructor(private http: HttpClient) {}
 
   buscarPais(termino: string): Observable<Country[]> {
-    const url = `${this.apiUrl}/name/${termino}?access_key=${this.apiKey}`;
+    const url = `${this.apiUrl}/name/${termino}`;
 
     return this.http.get<Country[]>(url);
   }
+
+  buscarCapital(termino: string): Observable<Country[]> {
+    const url = `${this.apiUrl}/capital/${termino}`;
+
+    return this.http.get<Country[]>(url);
+  }
+
+  getPaisPorAlpha(id: string): Observable<Country> {
+    const url = `${this.apiUrl}/alpha/${id}`;
+
+    return this.http.get<Country>(url);
+  }
+
 }
