@@ -1,8 +1,0 @@
-
-*.mp4
-*.html
-*.zip
-node_modules/
-package-lock.json
-*.code-workspace
-.vscode/
