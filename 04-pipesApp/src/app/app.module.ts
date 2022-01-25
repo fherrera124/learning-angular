@@ -3,19 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 
-// PrimeNg
-import {ButtonModule} from 'primeng/button';
-
+// Módulo personalizado
+import { SharedModule } from './shared/shared.module';
+import { AppRouterModule } from './app-router.module';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    ButtonModule
-  ],
+  declarations: [AppComponent],
+  imports: [BrowserModule, AppRouterModule, SharedModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
